@@ -2,6 +2,7 @@
 
 <form method="post" asp-action="Create">
     <div class="border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group row">
             <h2 class="text-info">Add Category</h2>
         </div>
@@ -14,6 +15,7 @@
                     </div>
                     <div class="col-8">
                         <input asp-for="CategoryName" class="form-control" />
+                        <span asp-validation-for="CategoryName" class="text-danger"></span>
                     </div>
                 </div>
 
@@ -23,6 +25,7 @@
                     </div>
                     <div class="col-8">
                         <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
                 </div>
 
@@ -39,3 +42,8 @@
     </div>
 
 </form>
+
+
+@section ScriptsValidate {
+    @{ <partial name="_ValidationScriptsPartial" />}
+}
