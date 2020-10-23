@@ -4,23 +4,34 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using PXUProduct.Models;
+using PXUProduct.ViewModels;
 
 namespace PXUProduct.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _appDbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, AppDbContext appDbContext)
         {
             _logger = logger;
+            _appDbContext = appDbContext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeIndexVM homeIndexVM = new HomeIndexVM()
+            {
+                Products = _appDbContext.Products.Include(p => p.Category).ToList(),
+                Categories = _appDbContext.Categories
+            };
+
+
+            return View(homeIndexVM);
         }
 
         public IActionResult Privacy()

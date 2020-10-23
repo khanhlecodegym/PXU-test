@@ -426,3 +426,4 @@ E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.genruntimeconfig.cac
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 E:\CodeGym\C#\PXUProduct\bin\Debug\netcoreapp3.1\libman.json
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.g.cs
+E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.csprojAssemblyReference.cache
