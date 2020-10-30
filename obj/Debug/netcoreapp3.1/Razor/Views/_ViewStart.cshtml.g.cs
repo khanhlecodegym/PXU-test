@@ -33,8 +33,15 @@ using PXUProduct.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "E:\CodeGym\C#\PXUProduct\Views\_ViewImports.cshtml"
+using PXUProduct.Common;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2fe697ec030aa68f1767aaad5e1c9e51998f5847", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"395f4bd0e533cfdf58ab6ba6ef8e59ad54c61b2e", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

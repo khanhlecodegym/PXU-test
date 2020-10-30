@@ -33,8 +33,15 @@ using PXUProduct.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "E:\CodeGym\C#\PXUProduct\Views\_ViewImports.cshtml"
+using PXUProduct.Common;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eb1cd53458ae92363f103ee606444a60c0cc521f", @"/Views/Category/Delete.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2fe697ec030aa68f1767aaad5e1c9e51998f5847", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"395f4bd0e533cfdf58ab6ba6ef8e59ad54c61b2e", @"/Views/_ViewImports.cshtml")]
     public class Views_Category_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Category>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -69,9 +76,9 @@ using PXUProduct.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb1cd53458ae92363f103ee606444a60c0cc521f4832", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb1cd53458ae92363f103ee606444a60c0cc521f4989", async() => {
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "eb1cd53458ae92363f103ee606444a60c0cc521f5094", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "eb1cd53458ae92363f103ee606444a60c0cc521f5251", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -118,7 +125,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                     </div>
                     <div class=""col"">
                         ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb1cd53458ae92363f103ee606444a60c0cc521f7696", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb1cd53458ae92363f103ee606444a60c0cc521f7853", async() => {
                     WriteLiteral("Back");
                 }
                 );

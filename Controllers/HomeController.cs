@@ -26,6 +26,7 @@ namespace PXUProduct.Controllers
         {
             HomeIndexVM homeIndexVM = new HomeIndexVM()
             {
+                /*Products = _appDbContext.Products.Where(prod => EF.Functions.Like(prod.Name, "%a%")).Include(p => p.Category).ToList(),*/
                 Products = _appDbContext.Products.Include(p => p.Category).ToList(),
                 Categories = _appDbContext.Categories
             };

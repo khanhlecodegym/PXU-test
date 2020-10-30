@@ -75,5 +75,51 @@ namespace PXUProduct.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public IActionResult Edit(int? id)
+        {
+            ProductCreateVM productVM = new ProductCreateVM()
+            {
+                Product = _appDbContext.Products.Find(id),
+                CategorySelectList = _appDbContext.Categories.Select(item => new SelectListItem
+                {
+                    Text = item.CategoryName,
+                    Value = item.Id.ToString()
+                })
+            };
+
+            return View(productVM);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(ProductCreateVM productCreateVM)
+        {
+            var files = HttpContext.Request.Form.Files;
+            string webRootPath = _webHostEnvironment.WebRootPath;
+
+            var objProduct = _appDbContext.Products.AsNoTracking().FirstOrDefault(pro => pro.Id == productCreateVM.Product.Id);
+
+            if (files.Count > 0)
+            {
+                string upload = webRootPath + CommonDefault.ImagePath;
+                string fileName = Guid.NewGuid().ToString();
+                string extension = Path.GetExtension(files[0].FileName);
+
+                using (var fileStream = new FileStream(Path.Combine(upload, fileName + extension), FileMode.Create))
+                {
+                    files[0].CopyTo(fileStream);
+                }
+
+                productCreateVM.Product.ImageUrl = fileName + extension;
+            } else
+            {
+                productCreateVM.Product.ImageUrl = objProduct.ImageUrl;
+            }
+
+            _appDbContext.Products.Update(productCreateVM.Product);
+            _appDbContext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }

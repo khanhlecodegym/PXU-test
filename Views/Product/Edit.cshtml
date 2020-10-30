@@ -1,7 +1,11 @@
 ﻿@model ProductCreateVM
 
+@{
+    ViewData["Title"] = "Edit Product";
+}
 
 <form method="post" enctype="multipart/form-data">
+    <input hidden asp-for="Product.Id"/>
     <div class="border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group row">
@@ -45,7 +49,7 @@
                         Image
                     </div>
                     <div class="col-8">
-                        <input type="file" name="files" value="" class="form-control" id="uploadBox"/>
+                        <input type="file" name="files" value="" class="form-control" id="uploadBox" />
                     </div>
                 </div>
 
@@ -63,11 +67,14 @@
 
                 <div class="row form-group">
                     <div class="col">
-                        <input type="submit" value="Create" class="btn btn-info" onclick="return validateInput()"/>
+                        <input type="submit" value="Update" class="btn btn-info"/>
                     </div>
                     <div class="col">
                         <a asp-action="Index" class="btn btn-success">Back</a>
                     </div>
+                </div>
+                <div class="col-4">
+                    <img src="@CommonDefault.ImagePath@Model.Product.ImageUrl" width="100%" style="boder-radius: 10px; border: 1px solid #ff6a00" />
                 </div>
             </div>
         </div>
@@ -75,19 +82,5 @@
 
 </form>
 
-@section ScriptsValidate {
-    <script>
-        function validateInput() {
-            console.log(document.getElementById("uploadBox").value);
-            if (document.getElementById("uploadBox").value == "") {
-                Swal.fire(
-                    'Error!',
-                    'Please upload an Image!',
-                    'error'
-                )
-                return false;
-            }
-            return true;
-        }
-    </script>
-}
+
+

@@ -33,8 +33,15 @@ using PXUProduct.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "E:\CodeGym\C#\PXUProduct\Views\_ViewImports.cshtml"
+using PXUProduct.Common;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5c533772e973bbe8e22298c8d6f0a1e5eeb0669d", @"/Views/Category/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2fe697ec030aa68f1767aaad5e1c9e51998f5847", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"395f4bd0e533cfdf58ab6ba6ef8e59ad54c61b2e", @"/Views/_ViewImports.cshtml")]
     public class Views_Category_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Category>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Category", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,7 +75,7 @@ using PXUProduct.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n    <div>\r\n        <div class=\"row pt-4\">\r\n            <div class=\"col-6\">\r\n                <h2 class=\"text-primary\">Category List</h2>\r\n            </div>\r\n\r\n            <div class=\"col-6\">\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c533772e973bbe8e22298c8d6f0a1e5eeb0669d5316", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c533772e973bbe8e22298c8d6f0a1e5eeb0669d5473", async() => {
                 WriteLiteral("\r\n                    Create New Category\r\n                ");
             }
             );
@@ -145,7 +152,7 @@ using PXUProduct.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                        </td>\r\n                        <td>\r\n                            <div>\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c533772e973bbe8e22298c8d6f0a1e5eeb0669d8998", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c533772e973bbe8e22298c8d6f0a1e5eeb0669d9155", async() => {
                 WriteLiteral("<i class=\"fas fa-edit\"></i>");
             }
             );
@@ -179,7 +186,7 @@ using PXUProduct.ViewModels;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c533772e973bbe8e22298c8d6f0a1e5eeb0669d11510", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c533772e973bbe8e22298c8d6f0a1e5eeb0669d11667", async() => {
                 WriteLiteral("<i class=\"fas fa-trash-alt\"></i>");
             }
             );
