@@ -15,6 +15,7 @@ namespace PXUProduct.Models
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -74,6 +75,25 @@ namespace PXUProduct.Models
                 Stock = 500,
                 ImageUrl = "https://acecookvietnam.cdn.vccloud.vn/wp-content/uploads/2017/07/590-HH-TCC.png",
                 CategoryId = 1
+            });
+
+            modelBuilder.Entity<ProductTag>().HasKey(protag => new { protag.ProductId, protag.TagId });
+
+            //Seeder data tag
+            modelBuilder.Entity<Tag>().HasData(new Tag
+            {
+                Id = 1,
+                Name = "Rẻ"
+            });
+            modelBuilder.Entity<Tag>().HasData(new Tag
+            {
+                Id = 2,
+                Name = "Ngon"
+            });
+            modelBuilder.Entity<Tag>().HasData(new Tag
+            {
+                Id = 3,
+                Name = "Bổ Khỏe"
             });
         }
     }

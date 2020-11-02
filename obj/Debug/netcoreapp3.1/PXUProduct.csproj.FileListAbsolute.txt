@@ -394,7 +394,6 @@ E:\CodeGym\C#\PXUProduct\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 E:\CodeGym\C#\PXUProduct\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\CodeGym\C#\PXUProduct\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\CodeGym\C#\PXUProduct\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.csprojAssemblyReference.cache
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.AssemblyInfoInputs.cache
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.AssemblyInfo.cs
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.csproj.CoreCompileInputs.cache
@@ -429,3 +428,4 @@ E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.dll
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.pdb
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.genruntimeconfig.cache
 E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
+E:\CodeGym\C#\PXUProduct\obj\Debug\netcoreapp3.1\PXUProduct.csprojAssemblyReference.cache

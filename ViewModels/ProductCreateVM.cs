@@ -11,5 +11,8 @@ namespace PXUProduct.ViewModels
     {
         public Product Product { get; set; }
         public IEnumerable<SelectListItem> CategorySelectList { get; set; }
+        public IEnumerable<SelectListItem> TagSelectList { get; set; }
+        public IEnumerable<int> SelectListTagIds { get; set; }
+
     }
 }

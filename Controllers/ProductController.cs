@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Hosting;
@@ -48,6 +49,11 @@ namespace PXUProduct.Controllers
                 {
                     Text = item.CategoryName,
                     Value = item.Id.ToString()
+                }),
+                TagSelectList = _appDbContext.Tags.Select(item => new SelectListItem
+                {
+                    Text = item.Name,
+                    Value = item.Id.ToString()
                 })
             };
 
@@ -70,7 +76,17 @@ namespace PXUProduct.Controllers
             }
 
             productCreateVM.Product.ImageUrl = fileName + extension;
+
+            foreach (var item in productCreateVM.SelectListTagIds)
+            {
+                productCreateVM.Product.ProductTags.Add(new ProductTag()
+                {
+                    TagId = item
+                });
+            }
+
             _appDbContext.Products.Add(productCreateVM.Product);
+
             _appDbContext.SaveChanges();
 
             return RedirectToAction("Index");
@@ -78,14 +94,25 @@ namespace PXUProduct.Controllers
 
         public IActionResult Edit(int? id)
         {
+            var product = _appDbContext.Products.Find(id);
+            var tags = _appDbContext.Tags.ToList();
+            var selectTags = product.ProductTags.Select(x => new Tag()
+            {
+                Id = x.Tag.Id,
+                Name = x.Tag.Name
+            });
+            var selectList = new List<SelectListItem>();
+            tags.ForEach(i => selectList.Add(new SelectListItem(i.Name, i.Id.ToString(), selectTags.Select(x => x.Id).Contains(i.Id))));
             ProductCreateVM productVM = new ProductCreateVM()
             {
-                Product = _appDbContext.Products.Find(id),
+                Product = _appDbContext.Products.FirstOrDefault(item => item.Id == id),
                 CategorySelectList = _appDbContext.Categories.Select(item => new SelectListItem
                 {
                     Text = item.CategoryName,
                     Value = item.Id.ToString()
-                })
+                }),
+                TagSelectList = selectList
+                /* SelectListTagIds = Product..Select(sc => sc.CourseId)*/
             };
 
             return View(productVM);

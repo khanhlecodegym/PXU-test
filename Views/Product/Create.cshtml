@@ -45,7 +45,7 @@
                         Image
                     </div>
                     <div class="col-8">
-                        <input type="file" name="files" value="" class="form-control" id="uploadBox"/>
+                        <input type="file" name="files" value="" class="form-control" id="uploadBox" />
                     </div>
                 </div>
 
@@ -55,15 +55,27 @@
                     </div>
                     <div class="col-8">
                         <select asp-for="Product.CategoryId" asp-items="@Model.CategorySelectList" class="form-control">
-                            <option disabled selected>Vui lòng chọn Category</option>
+                            @*<option disabled selected>Vui lòng chọn Category</option>*@
                         </select>
-                        <span asp-validation-for="Product.Description" class="text-danger"></span>
+                        <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-4">
+                        <label asp-for="Product.ProductTags"></label>
+                    </div>
+                    <div class="col-8">
+                        <select asp-for="@Model.SelectListTagIds" asp-items="@Model.TagSelectList" class="form-control" multiple>
+                            <option disabled selected>Vui lòng chọn Tag</option>
+                        </select>
+                        <span asp-validation-for="Product.ProductTags" class="text-danger"></span>
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col">
-                        <input type="submit" value="Create" class="btn btn-info" onclick="return validateInput()"/>
+                        <input type="submit" value="Create" class="btn btn-info" onclick="return validateInput()" />
                     </div>
                     <div class="col">
                         <a asp-action="Index" class="btn btn-success">Back</a>
